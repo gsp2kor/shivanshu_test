@@ -42,8 +42,8 @@ public class RemoveDuplicatesInArray {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(removeDuplicatesJava8(new int[]{-1,-1,0,0,2,3,3,4,7,9,9,13,15})));
-        System.out.println(Arrays.toString(removeDuplicatesModifyInputArray(new int[]{-1,-1,0,0,2,3,3,4,7,9,9,13,15})));
-        System.out.println(Arrays.toString(removeDuplicatesNotModifyingInput(new int[]{-1,-1,0,0,2,3,3,4,7,9,9,13,15})));
+        System.out.println(Arrays.toString(removeDuplicatesJava8(new int[]{-1,-1,0,0,2,3,3,4,7,9,9,13,15,15,15,15,15,15})));
+        System.out.println(Arrays.toString(removeDuplicatesModifyInputArray(new int[]{-1,-1,0,0,2,3,3,4,7,9,9,13,15,15,15,15,15,15})));
+        System.out.println(Arrays.toString(removeDuplicatesNotModifyingInput(new int[]{-1,-1,0,0,2,3,3,4,7,9,9,13,15,15,15,15,15,15})));
     }
 }
