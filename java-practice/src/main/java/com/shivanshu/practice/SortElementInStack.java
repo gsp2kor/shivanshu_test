@@ -12,10 +12,10 @@ public class SortElementInStack {
         stack.push(2);
         stack.push(4);
 
-        printSorrtedStack(sortStackIterative(stack));
+        printSortedStack(sortStackIterative(stack));
 
 
-        printSorrtedStack(sortStackRecursive(stack));
+        printSortedStack(sortStackRecursive(stack));
     }
 
     private static Stack<Integer> sortStackRecursive(Stack<Integer> stack) {
@@ -76,11 +76,11 @@ public class SortElementInStack {
 
 
 
-    private static void printSorrtedStack(Stack<Integer> stack) {
+    private static void printSortedStack(Stack<Integer> stack) {
         if(stack.isEmpty()) return;
         int popped = stack.pop();
         System.out.println(popped);
-        printSorrtedStack(stack);
+        printSortedStack(stack);
         stack.push(popped);
     }
 }
