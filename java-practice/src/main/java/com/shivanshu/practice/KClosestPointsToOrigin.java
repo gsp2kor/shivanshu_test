@@ -6,7 +6,6 @@ public class KClosestPointsToOrigin {
 
     private static int[][] kClosest(int[][] points, int K) {
         Map<Integer, List<Integer>> listOfIntegers = new HashMap<>();
-        int length = points.length;
         int[][] result = new int[K][2];
 
 
