@@ -6,25 +6,25 @@ public class MaxWidthOfBinaryTree {
 
     public static void main(String[] args)
     {
-        Node root = new Node(15);
-        root.left = new Node(10);
-        root.right = new Node(20);
-        root.left.left = new Node(8);
-        root.left.right = new Node(12);
-        root.right.left = new Node(16);
-        root.right.right = new Node(25);
+        BinaryTreeNode root = new BinaryTreeNode(15);
+        root.left = new BinaryTreeNode(10);
+        root.right = new BinaryTreeNode(20);
+        root.left.left = new BinaryTreeNode(8);
+        root.left.right = new BinaryTreeNode(12);
+        root.right.left = new BinaryTreeNode(16);
+        root.right.right = new BinaryTreeNode(25);
 
         System.out.println(maxWidthIterative(root));
         System.out.println(maxWidthRecursive(root));
     }
 
-    private static int maxWidthRecursive(Node root) {
+    private static int maxWidthRecursive(BinaryTreeNode root) {
         Map<Integer, Integer> map =  new HashMap<>();
         getMaxWidth(root,map,1);
         return map.values().stream().max(Comparator.naturalOrder()).get();
     }
 
-    private static void getMaxWidth(Node root, Map<Integer, Integer> map, int level) {
+    private static void getMaxWidth(BinaryTreeNode root, Map<Integer, Integer> map, int level) {
 
         if(root == null) return;
 
@@ -34,14 +34,14 @@ public class MaxWidthOfBinaryTree {
         getMaxWidth(root.right,map,level+1);
     }
 
-    private static int maxWidthIterative(Node root) {
+    private static int maxWidthIterative(BinaryTreeNode root) {
         int maxWidth = 0;
 
         if(root == null ) return 0;
 
-        Node current = null;
+        BinaryTreeNode current = null;
 
-        Queue<Node> queue = new LinkedList<>();
+        Queue<BinaryTreeNode> queue = new LinkedList<>();
         queue.add(root);
 
         while(!queue.isEmpty()){
@@ -70,14 +70,4 @@ public class MaxWidthOfBinaryTree {
     }
 
 
-}
-
-class Node
-{
-    int key;
-    Node left = null, right = null;
-
-    Node(int key) {
-        this.key = key;
-    }
 }
